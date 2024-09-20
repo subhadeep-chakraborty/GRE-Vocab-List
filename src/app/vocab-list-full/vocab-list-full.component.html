@@ -1,0 +1,42 @@
+
+
+
+
+        
+    <!-- </ng-container> -->
+
+<!-- <span>{{object1.title}}</span>
+<div [innerHTML]="object1.description">
+</div> -->
+
+<!-- <ng-container *ngFor="let data of vocabArr[0]">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header>
+                <mat-panel-title> {{data?.title}} </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div [innerHTML]="data?.description"></div>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </ng-container> -->
+
+<ng-container >
+<div class="row"  style="    padding: 27px">
+      <div class="col-md-3" *ngFor="let rows of vocabArr; index as i ">
+        <span style="font-size: 36px;
+        font-weight: 700;
+        font-family: cursive;"> Group {{i}}</span>
+        <ng-container *ngFor="let data of rows">
+            <!-- <mat-grid-tile><ng-container *ngFor="let data of vocabArr[0]"> -->
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title> {{data?.title}} </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <div [innerHTML]="data?.description"></div>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </ng-container>
+</div>
+</div>
+</ng-container>
